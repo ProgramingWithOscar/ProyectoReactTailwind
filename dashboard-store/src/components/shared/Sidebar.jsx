@@ -1,8 +1,13 @@
 import { RiHome6Line, RiPercentLine, RiPieChartLine, RiMailLine, RiNotification3Line,RiSettings4Line, RiLogoutCircleRLine } from 'react-icons/ri';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+    // eslint-disable-next-line react/prop-types
+    const { showMenu } = props;
+        
+    
     return (
-        <div className='bg-[#1F1D2B] fixed left-0 w-28 h-full p-1 flex flex-col justify-between py-6 rounded-tr-xl rounded-br-xl'>
+        <div className={`bg-[#1F1D2B] fixed lg:left-0 w-28 h-full p-1 flex flex-col justify-between py-6 rounded-tr-xl rounded-br-xl transition-all
+        ${showMenu ? "left-0" : "-left-full"  }`}>
             <div>
             <ul className='pl-4 '>
                 <li>
